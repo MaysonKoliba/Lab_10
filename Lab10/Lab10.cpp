@@ -1,20 +1,39 @@
 // Lab10.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+#include "..\\Lab10\Graph.h"
 #include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+
+	Graph test;
+
+	bool number1 = test.addEdge(0,2);
+	bool number2 = test.addEdge(3, 7);
+	bool number3 = test.addEdge(3, 9);
+	bool number4 = test.addEdge(3, 4);
+	bool number11 = test.addEdge(-3, 9);
+	bool number12 = test.addEdge(13, 4);
+
+	bool number5 = test.addEdge(5, 15);
+	bool number6 = test.addEdge(7, -8);
+
+	bool number7 = test.removeEdge(3, 9);
+
+	bool number8 = test.hasEdge(0, 1);
+	bool number9 = test.hasEdge(3, 7);
+	bool number10 = test.hasEdge(3, 9);
+   
+	string output1 = test.outEdge(3);
+	cout << output1 << endl;
+
+	string output2 = test.outEdge(0);
+	cout << output2 << endl;
+
+	return 0;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

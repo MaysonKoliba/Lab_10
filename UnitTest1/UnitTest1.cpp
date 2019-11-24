@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "CppUnitTest.h"
+#include "..\\Lab10\Graph.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
