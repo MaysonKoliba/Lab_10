@@ -2,12 +2,12 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <fstream>
 using namespace std;
 
 
 int main()
 {
-
 	string inputLine = "";
 	string output = "";
 	int input = 0;
@@ -15,6 +15,27 @@ int main()
 	int edge;
 
 	Graph userGraph;
+
+	cout << "Do you want to read in a file, yes or no?" << endl;
+	getline(cin, inputLine);
+
+	if (inputLine == "yes") {
+		ifstream file;
+		file.open("C:/Users/mayso/Desktop/ThisSemester/DataStructures/Lab_10/Lab10/matrix.txt");
+		file.is_open();
+
+		for (int i = 0; i < 10; i++) {
+			getline(file, inputLine);
+			for (int k = 0; k < 10; k++) {
+			
+				if (inputLine[k] == '1') {
+					userGraph.addEdge(i, k);
+				}
+			}
+		}
+
+	}
+	
 
 	while (input != 7) {
 		cout << "Press 1 to add an edge to graph" << endl;
