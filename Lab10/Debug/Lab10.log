@@ -1,2 +1,17 @@
-﻿  Lab10.cpp
+﻿  Graph.cpp
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab_10\Lab10\Graph.cpp(29,20): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab_10\Lab10\Graph.cpp(42,20): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab_10\Lab10\Graph.cpp(49,12): warning C4018:  '>': signed/unsigned mismatch
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab_10\Lab10\Graph.cpp(52,19): warning C4018:  '>': signed/unsigned mismatch
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab_10\Lab10\Graph.cpp(78,12): warning C4018:  '>': signed/unsigned mismatch
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab_10\Lab10\Graph.cpp(81,19): warning C4018:  '>': signed/unsigned mismatch
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab_10\Lab10\Graph.cpp(110,12): warning C4018:  '>': signed/unsigned mismatch
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab_10\Lab10\Graph.cpp(113,19): warning C4018:  '>': signed/unsigned mismatch
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab_10\Lab10\Graph.cpp(137,14): warning C4018:  '>': signed/unsigned mismatch
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab_10\Lab10\Graph.cpp(160,14): warning C4018:  '>': signed/unsigned mismatch
+  Lab10.cpp
+  Generating Code...
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab_10\Lab10\Graph.cpp(166,20): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab_10\Lab10\Graph.cpp(74): warning C4715:  'Graph::addEdge': not all control paths return a value
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab_10\Lab10\Graph.cpp(133): warning C4715:  'Graph::hasEdge': not all control paths return a value
   Lab10.vcxproj -> C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab_10\Lab10\Debug\Lab10.exe

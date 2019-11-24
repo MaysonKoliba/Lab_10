@@ -7,32 +7,26 @@
 #include <string>
 using namespace std;
 
+
 int main()
 {
 
-	Graph test;
+	cout << "Press 1 to add an edge to graph" << endl;
+	cout << "Press 2 remove an edge from graph" << endl;
+	cout << "Press 3 Find an edge in the graph" << endl;
+	cout << "Press 4 Find the out edges of a vertices" << endl;
+	cout << "Press 5 Find the in edges of a vertices" << endl;
+	cout << "Press 6 To Print out Adjacency Matrix" << endl;
+	cout << "Press 7 to quit" << endl;
 
-	bool number1 = test.addEdge(0,2);
-	bool number2 = test.addEdge(3, 7);
-	bool number3 = test.addEdge(3, 9);
-	bool number4 = test.addEdge(3, 4);
-	bool number11 = test.addEdge(-3, 9);
-	bool number12 = test.addEdge(13, 4);
+	int input = 0;
 
-	bool number5 = test.addEdge(5, 15);
-	bool number6 = test.addEdge(7, -8);
+	while (input != 7) {
 
-	bool number7 = test.removeEdge(3, 9);
 
-	bool number8 = test.hasEdge(0, 1);
-	bool number9 = test.hasEdge(3, 7);
-	bool number10 = test.hasEdge(3, 9);
-   
-	string output1 = test.outEdge(3);
-	cout << output1 << endl;
+	}
 
-	string output2 = test.outEdge(0);
-	cout << output2 << endl;
+
 
 	return 0;
 }

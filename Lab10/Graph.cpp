@@ -27,6 +27,19 @@ Graph::Graph(int numVertex)
 Graph::~Graph()
 {
 	for (int i = 0; i < vertices.size(); i++) {
+
+		Node* current = vertices[i]->next;
+		Node* temp = nullptr;
+
+		while (current != nullptr) {
+			temp = current->next;
+			delete current;
+			current = temp;
+		}
+
+	}
+
+	for (int i = 0; i < vertices.size(); i++) {
 		delete vertices[i];
 	}
 }
@@ -79,6 +92,10 @@ bool Graph::removeEdge(int vertex, int edge)
 	while (removeEdge->value != edge) {
 		start = removeEdge;
 		removeEdge = removeEdge->next;
+
+		if (removeEdge == nullptr) {
+			return false;
+		}
 	}
 
 	start->next = removeEdge->next;
@@ -118,7 +135,7 @@ bool Graph::hasEdge(int vertex, int edge)
 string Graph::outEdge(int vertex)
 {
 	if ((vertex > vertices.size() - 1) || (vertex < 0)) {
-		return false;
+		return "";
 	}
 	else if (vertices[vertex]->next == nullptr) {
 		return "";
@@ -140,6 +157,25 @@ string Graph::outEdge(int vertex)
 
 string Graph::inEdge(int vertex)
 {
+	if ((vertex > vertices.size() - 1) || (vertex < 0)) {
+		return "";
+	}
+
 	string output = "";
+
+	for (int i = 0; i < vertices.size(); i++) {
+
+		Node* targetNode = vertices[i]->next;
+
+		while (targetNode != nullptr) {
+
+			if (targetNode->value == vertex) {
+				output = output + to_string(vertices[i]->value);
+			}
+
+			targetNode = targetNode->next;
+		}
+	}
+
 	return output;
 }
