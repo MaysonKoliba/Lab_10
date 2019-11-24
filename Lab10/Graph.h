@@ -24,6 +24,7 @@ public:
 	bool hasEdge(int vertex, int edge);
 	string outEdge(int vertex);
 	string inEdge(int vertex);
+	void printMatrix();
 	~Graph();
 
 private:

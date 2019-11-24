@@ -135,10 +135,10 @@ bool Graph::hasEdge(int vertex, int edge)
 string Graph::outEdge(int vertex)
 {
 	if ((vertex > vertices.size() - 1) || (vertex < 0)) {
-		return "";
+		return "No out edges!";
 	}
 	else if (vertices[vertex]->next == nullptr) {
-		return "";
+		return "No out edges!";
 	}
 	
 	string output = "";
@@ -158,7 +158,7 @@ string Graph::outEdge(int vertex)
 string Graph::inEdge(int vertex)
 {
 	if ((vertex > vertices.size() - 1) || (vertex < 0)) {
-		return "";
+		return "No in edges!";
 	}
 
 	string output = "";
@@ -177,5 +177,26 @@ string Graph::inEdge(int vertex)
 		}
 	}
 
+	if (output == "") {
+		return "No in edges!";
+	}
+
 	return output;
+}
+
+void Graph::printMatrix()
+{
+
+	for (int i = 0; i < vertices.size(); i++) {
+		for (int k = 0; k < vertices.size(); k++) {
+
+			if (this->hasEdge(i,k)) {
+				cout << "1 ";
+			}
+			else {
+				cout << "0 ";
+			}
+		}
+		cout << endl;
+	}
 }
