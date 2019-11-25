@@ -16,13 +16,16 @@ int main()
 
 	Graph userGraph;
 
-	cout << "Do you want to read in a file, yes or no?" << endl;
+	cout << "Do you want to read in a matrix, yes or no?" << endl;
 	getline(cin, inputLine);
 
+	while (inputLine != "yes" && inputLine != "no") {
+		cout << "Please type yes or no" << endl;
+		getline(cin, inputLine);
+	}
+
 	if (inputLine == "yes") {
-		ifstream file;
-		file.open("C:/Users/mayso/Desktop/ThisSemester/DataStructures/Lab_10/Lab10/matrix.txt");
-		file.is_open();
+		ifstream file("matrix.txt");
 
 		for (int i = 0; i < 10; i++) {
 			getline(file, inputLine);
@@ -34,6 +37,7 @@ int main()
 			}
 		}
 
+		cout << "The adjacency matrix has been read in!" << endl << endl;
 	}
 	
 
@@ -58,10 +62,10 @@ int main()
 			cin >> edge;
 
 			if (userGraph.addEdge(vertex, edge)) {
-				cout << "Edge added!" << endl << endl;
+				cout << "<< Edge added! >>" << endl << endl;
 			}
 			else {
-				cout << "You can't add that edge!" << endl << endl;
+				cout << "<< You can't add that edge! >>" << endl << endl;
 			}
 			cin.ignore();
 			break;
@@ -73,10 +77,10 @@ int main()
 			cin >> edge;
 
 			if (userGraph.removeEdge(vertex, edge)) {
-				cout << "Edge removed!" << endl << endl;
+				cout << "<< Edge removed! >>" << endl << endl;
 			}
 			else {
-				cout << "You can't remove that edge" << endl << endl;
+				cout << "<< You can't remove that edge! >>" << endl << endl;
 			}
 			cin.ignore();
 			break;
@@ -88,10 +92,10 @@ int main()
 			cin >> edge;
 
 			if (userGraph.hasEdge(vertex, edge)) {
-				cout << "Edge found!" << endl << endl;
+				cout << "<< Edge found! >>" << endl << endl;
 			}
 			else {
-				cout << "Edge not found!" << endl << endl;
+				cout << "<< Edge not found! >>" << endl << endl;
 			}
 			cin.ignore();
 			break;
@@ -101,7 +105,7 @@ int main()
 			cin >> vertex;
 
 			output = userGraph.outEdge(vertex);
-			cout << "Here are the out edges" << endl;
+			cout << "<< Here are the out edges >>" << endl;
 			cout << output << endl << endl;
 			cin.ignore();
 			break;
@@ -111,19 +115,19 @@ int main()
 			cin >> vertex;
 
 			output = userGraph.inEdge(vertex);
-			cout << "Here are the in edges" << endl;
+			cout << "<< Here are the in edges >>" << endl;
 			cout << output << endl << endl;
 			cin.ignore();
 			break;
 
 		case 6:
-			cout << "Printing the adjacency matrix!" << endl;
+			cout << "<< Printing the adjacency matrix! >>" << endl;
 			userGraph.printMatrix();
 			cout << endl << endl;
 			break;
 
 		case 7:
-			cout << "Quiting..." << endl;
+			cout << "<< Quiting... >>" << endl;
 			break;
 		}
 	}

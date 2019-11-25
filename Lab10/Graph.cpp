@@ -52,6 +52,9 @@ bool Graph::addEdge(int vertex, int edge)
 	else if ((vertex > vertices.size() - 1) || (vertex < 0)) {
 		return false;
 	}
+	else if (this->hasEdge(vertex,edge)) {
+		return false;
+	}
 
 	if (vertices[vertex]->next == nullptr) {
 		Node* newEdge = new Node(edge);
@@ -147,7 +150,7 @@ string Graph::outEdge(int vertex)
 
 	while (targetNode != nullptr) {
 		
-		output = output + to_string(targetNode->value);
+		output = output + to_string(targetNode->value) + " ";
 
 		targetNode = targetNode->next;
 	}
@@ -170,7 +173,7 @@ string Graph::inEdge(int vertex)
 		while (targetNode != nullptr) {
 
 			if (targetNode->value == vertex) {
-				output = output + to_string(vertices[i]->value);
+				output = output + to_string(vertices[i]->value) + " ";
 			}
 
 			targetNode = targetNode->next;
